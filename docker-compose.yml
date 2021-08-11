@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  nodd:
+  node:
     build:
-      context: .
+      context: ./service/dockerfile/node
     container_name: started_node
     working_dir: /var/www
     volumes:
       - ./:/var/www
     ports:
-      - "6004:6001"
+      - "6007:6001"
     stdin_open: true
     tty: true
     environment:
@@ -24,7 +24,7 @@ services:
       - ./service/log/nginx:/var/log/nginx
       - ./:/var/www
     ports:
-      - "83:80"
+      - "86:80"
     environment:
       - TZ=Asia/Shanghai
     depends_on:
