@@ -10,6 +10,8 @@ services:
       - ./:/var/www
     ports:
       - "6007:6001"
+      - "8086:8080"
+      - "3006:3000"
     stdin_open: true
     tty: true
     environment:
