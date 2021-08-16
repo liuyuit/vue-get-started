@@ -30,5 +30,20 @@ $(function () {
         <p>You are {{ age }} years old!</p>
     </div>
 
+    <form id="vm-form" action="#">
+        <p><input type="text" v-model="email"></p>
+        <p><input type="text" v-model="name"></p>
+    </form>
 </body>
+<script>
+    var vmForm = new Vue({
+        el: '#vm-form',
+        data: {
+            name: 'Jack',
+            email: 'jack@qq.com'
+        }
+    });
+
+    window.vmForm = vmForm;
+</script>
 <html>
